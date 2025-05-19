@@ -7,6 +7,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  title =signal('This is our header');
+  title = signal('This is our header');
 
 }
