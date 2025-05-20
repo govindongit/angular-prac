@@ -33,5 +33,5 @@ import { HomeComponent } from "./home/home.component";
     `],
 })
 export class AppComponent {
-  title = 'My Angular learning journey';
+  title = 'My Angular Journey';
 }
