@@ -7,4 +7,19 @@ header{
     justify-content: space-between;
     font-size: 24px;
     line-height: 32px;
+    nav{
+        cursor: pointer;
+        &:hover{
+            color: aqua;
+        }
+    }
+}
+ul{
+    list-style: none;
+    li{
+        cursor: pointer;
+        &:hover{
+            color: aqua;
+        }
+    }
 }
