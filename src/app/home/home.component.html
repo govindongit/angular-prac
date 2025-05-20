@@ -1,7 +1,12 @@
-<p>Home Component - this is coming from the home page component!</p>
-
-<app-greeting [message]="'Hellooo bhaishab!!!'" />
-
+<p>Home Page Component - this is coming from the home page component!</p>
+<hr />
+<app-greeting
+  [message]="
+    'Hellooo bhaishab!!! message passing by the parent via greeting component'
+  "
+/>
+<hr />
 <p>Event Handling</p>
-
 <input type="text" (keyup)="keyUpHandler($event)" />
+
+<app-counter />
