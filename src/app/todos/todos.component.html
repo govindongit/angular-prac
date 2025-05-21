@@ -1,2 +1,7 @@
 <p>Todo Page Component</p>
-<p>{{ todoItems()[0].title }}</p>
+
+<!-- <p>{{ todoItems()[0].title }}</p> -->
+
+@for (todo of todoItems(); track todo.id) {
+<p>{{todo.title}}</p>
+}
