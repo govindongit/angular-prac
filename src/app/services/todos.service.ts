@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Todo } from '../model/todo.type';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodosService {
-   
-  todoItems: Array<Todo> = [
+   http = inject(HttpClient);
+/*  todoItems: Array<Todo> = [
     {
     title:'grocerries',
     id:0,
@@ -19,6 +20,11 @@ export class TodosService {
     userId:1,
     completed:false,
   },
-]
-  constructor() { }
+] */
+
+getTodoFromApi(){
+  const url =  `https://jsonplaceholder.typicode.com/todos`;
+  return this.http.get<Array<Todo>>(url);
+}
+  // constructor() { }
 }

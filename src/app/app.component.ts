@@ -26,5 +26,5 @@ import { HeaderComponent } from "./components/header/header.component";
     `],
 })
 export class AppComponent {
-  title = 'My Angular Journey';
+  title = 'Angular Journey';
 }
