@@ -4,6 +4,11 @@
 
 <h3>TODO List Item</h3>
 
+<!-- using control flow blocks -->
+@if (!todoItems().length) {
+<p>Loading...</p>
+}
+
 <ul class="todos">
   @for (todo of todoItems(); track todo.id) {
   <li class="todos__item">

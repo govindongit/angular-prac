@@ -2,6 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { TodosService } from '../services/todos.service';
 import { Todo } from '../model/todo.type';
 import { catchError } from 'rxjs';
+// import { NgIf } from '@angular/common'; // recent upgrade in the angular 
 
 @Component({
   selector: 'app-todos',
