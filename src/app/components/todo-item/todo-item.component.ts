@@ -1,10 +1,11 @@
 import { Component, input, output } from '@angular/core';
 import { Todo } from '../../model/todo.type';
 import { HighlightedCompletedTodoDirective } from '../../directives/highlighted-completed-todo.directive';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-todo-item',
-  imports: [HighlightedCompletedTodoDirective],
+  imports: [HighlightedCompletedTodoDirective, UpperCasePipe],
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.scss'
 })
