@@ -2,11 +2,12 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { TodosService } from '../services/todos.service';
 import { Todo } from '../model/todo.type';
 import { catchError } from 'rxjs';
+import { TodoItemComponent } from '../components/todo-item/todo-item.component';
 // import { NgIf } from '@angular/common'; // recent upgrade in the angular 
 
 @Component({
   selector: 'app-todos',
-  imports: [],
+  imports: [TodoItemComponent],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.scss'
 })
@@ -29,5 +30,17 @@ throw err;
       this.todoItems.set(todos);
     });
   }
-
+ updateTodoItem(todoItem: Todo) {
+    this.todoItems.update((todos) => {
+      return todos.map((todo) => {
+        if (todo.id === todoItem.id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      });
+    });
+  }
 }
